@@ -471,3 +471,77 @@ addBtn.addEventListener('click', function(e){
 
   gameContainer.appendChild(gameStatContainer);
 });
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+$('#MinimumToday').attr('min', today);
+
+var NFLteam = 
+    document.getElementById("hometeam");
+function myFunction() {
+  var x = document.getElementById("mySelect");
+  var txt = "";
+  var i;
+  for (i = 0; i < x.length; i++) {
+    txt = txt + x.options[i].text + "<br>";
+  }
+  
+  document.getElementById("gameOutput").innerHTML = txt;
+}
+const nflTeams = [
+  {
+ 
+
+
+  }
+  ]
+let myPromise = new Promise(function(myResolve, myReject) {
+  let req = new XMLHttpRequest();
+  req.open('GET', "https://wolfmanbunnydeer.github.io/NFLgames-team3/");
+  req.onload = function() {
+    if (req.status == 200) {
+      myResolve(req.response);
+    } else {
+      myReject("File not Found");
+    }
+  };
+  req.send();
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+function myFunction() {
+
+// Create a p element:
+const para = document.createElement("p");
+
+// Create a text node:
+const node = document.createTextNode("This is a paragraph.");
+
+// Append text node to the p element:
+para.appendChild(node);
+
+// Append the p element to the body:
+document.getElementById("gameDIV").innerhtml(para);
+}
+function createNFLItem(name) {
+    let li = document.createElement('li');
+    li.textContent = name;
+    return li;
+}
+// get the ul#NFL
+const NFL = document.querySelector('#AddGame');
+// add NFL item
+function myFunction() {
+  const element = document.getElementById("gameDIV");
+  if (element.getElementByClass== "flex-container") {
+    element.getElementByClass = "flex-container";
+  } else {
+    element.getElementByClass = "flex-container";
+  }
+}
