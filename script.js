@@ -231,14 +231,6 @@ document.getElementById("Game");
     //   let dest = document.querySelector("li");
     // }
 
-    function deleteItem() {
-      el.remove();
-      console.log("Element:" + el + " removed")
-      input.focus();
-    }
-function AddGame()() {
-  window.location.assign("https://wolfmanbunnydeer.github.io/NFLgameteam3/")
-}
 // Create a "close" button and append it to each list item
 
 var myNodelist = document.getElementsByTagName("LI");
